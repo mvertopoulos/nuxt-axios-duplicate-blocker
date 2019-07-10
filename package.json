@@ -1,0 +1,18 @@
+{
+  "name": "nuxt-axios-duplicate-blocker",
+  "version": "1.0.0",
+  "description": "Block duplicate axios requests using interceptors and return results using promises",
+  "main": "lib/module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nuxt",
+    "axios",
+    "duplicate",
+    "request",
+    "blocking"
+  ],
+  "author": "Marios Vertopoulos",
+  "license": "MIT"
+}
