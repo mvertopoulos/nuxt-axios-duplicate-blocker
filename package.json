@@ -38,6 +38,6 @@
     "url": "git+https://github.com/mvertopoulos/nuxt-axios-duplicate-blocker.git"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.5.4"
+    "@nuxtjs/axios": "5.5.2"
   }
 }
