@@ -34,11 +34,11 @@ Option | Type | Default | Description
 --- | --- | --- | ---
 debug | Boolean | ```this.options.dev``` <br>(```true``` for development ```false``` for production) | If set to true it will always show a warning in console whenever a request has been blocked.
 onPageChange | Boolean | ```true``` | If set to true **all** active API requests will be canceled when switching pages.
-headerBlockerKey | String | ```<empty>``` | Set the key in headers section of Axios's request configuration, to be used as the container of the [request configuration options](#axios-request-configuration-options) for this module. Read the [important note](#important-note) below for more details.
+headerBlockerKey | String | ```<empty>``` | Set the key in headers section of Axios's request configuration, to be used as the container of the [request configuration options](#axios-request-configuration-options) for this module. Read the [important note](#exclamation-important-note) below for more details.
 
 ## Axios Request Configuration Options
 
-:exclamation: Please read the note below if these options do not work.
+:exclamation: Please read the [note](#exclamation-important-note) below if these options do not work.
 
 Option | Type | Default | Description
 --- | --- | --- | ---
