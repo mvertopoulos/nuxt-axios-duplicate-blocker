@@ -1,6 +1,6 @@
 {
   "name": "nuxt-axios-duplicate-blocker",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Block duplicate axios requests using interceptors and return results using promises",
   "main": "lib/module.js",
   "scripts": {

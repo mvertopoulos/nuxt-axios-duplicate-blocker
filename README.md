@@ -34,6 +34,7 @@ Option | Type | Default | Description
 --- | --- | --- | ---
 debug | Boolean | ```this.options.dev``` <br>(```true``` for development ```false``` for production) | If set to true it will always show a warning in console whenever a request has been blocked.
 onPageChange | Boolean | ```true``` | If set to true **all** active API requests will be canceled when switching pages.
+blockByDefault | Boolean | ```true``` | Sets the default policy for blocking requests. If set to true all requests will be blocked unless specified otherwise in the [request configuration](#axios-request-configuration-options) of a call with the ```blockAllowed``` option.
 headerBlockerKey | String | ```<empty>``` | Set the key in headers section of Axios's request configuration, to be used as the container of the [request configuration options](#axios-request-configuration-options) for this module. Read the [important note](#exclamation-important-note) below for more details.
 
 ## Axios Request Configuration Options
@@ -43,12 +44,14 @@ headerBlockerKey | String | ```<empty>``` | Set the key in headers section of Ax
 Option | Type | Default | Description
 --- | --- | --- | ---
 requestKey | String | ```url```:```parameterName1```&#124;```parameterName2```&#124;```...``` | You can *optionally* provide a custom request key for specifying requests that should not block each other by adding an ID to a configuration object for an axios call.
+blockAllowed | Boolean | ```true``` | You can *optionally* use this parameter to override the default policy for blocking requests, set in [module options](#module-options) with ```blockByDefault```.
 
 Example:
 ``` js
 await this.$axios.$get('/example-api/example', {
     params: { ... },
-    requestKey: 'customRequestKeyName'
+    requestKey: 'customRequestKeyName',
+    blockAllowed: false
 });
 ```
 #### :exclamation: IMPORTANT NOTE
@@ -74,7 +77,8 @@ await this.$axios.$get('/example-api/example', {
     params: { ... },
     headers: { 
         blocker: {
-            requestKey: 'customRequestKeyName' 
+            requestKey: 'customRequestKeyName',
+            blockAllowed: false
         }
     }
 });
